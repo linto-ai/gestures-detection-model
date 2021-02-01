@@ -45,3 +45,8 @@ pip3 install -r models/requirements.txt
 python3 run_ssd_example.py vgg16-ssd models/vgg16-ssd-linagora-gest-detection.pth models/voc-model-labels.txt panoramic-dataset-for-gestures-detection/JPEGImages/<image_name>
 ```
 ![image_demo](https://github.com/linto-ai/gestures-detection-model/blob/main/demo/linagora_test-gest1.jpg)
+5. Run video demo 
+```
+python3 run_ssd_live_demo.py vgg16-ssd models/vgg16-ssd-linagora-gest-detection.pth models/voc-model-labels.txt panoramic-dataset-for-gestures-detection/conf_video_gest/<video_name>
+```
+![video_demo](https://github.com/linto-ai/gestures-detection-model/blob/main/demo/gest.gif)
