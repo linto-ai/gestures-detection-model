@@ -1,5 +1,5 @@
 # gestures-detection-model
-Our model helps us to detect the gestures of participants in a meeting room, suddenly, we try to detect the ``` voting ```, ``` speaking``` gestures of a ```person   ``` participant.
+Our model helps us to detect the gestures of participants in a meeting room, suddenly, we try to detect the ``` voting ```, ``` speaking``` gestures of a ```person``` participant.
 ----
 
 ![image_exp](https://github.com/linto-ai/gestures-detection-model/blob/main/demo/gest.jpg)
