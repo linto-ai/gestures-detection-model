@@ -1,0 +1,4 @@
+BACKGROUND
+person
+voting
+speaking
