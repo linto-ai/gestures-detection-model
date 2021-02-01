@@ -18,3 +18,19 @@ We base our gesture detection work on the [VGG16-SSD model](https://storage.goog
 4. numpy
 5. Pandas
 
+### run the following commands to test our model
+
+1. Clone from github the repository 
+```
+git clone https://github.com/linto-ai/gestures-detection-model
+
+cd gestures-detection-model
+```
+2. Download dataset( images and videos )
+```
+git clone https://github.com/linto-ai/panoramic-dataset-for-gestures-detection
+```
+3. Install requirements
+```
+pip3 install -r requirements.txt
+```
