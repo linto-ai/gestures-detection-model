@@ -1,0 +1,3 @@
+demo/gest.gif filter=lfs diff=lfs merge=lfs -text
+demo/gest.jpg filter=lfs diff=lfs merge=lfs -text
+demo/linagora_test-gest1.jpg filter=lfs diff=lfs merge=lfs -text
