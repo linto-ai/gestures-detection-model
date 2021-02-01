@@ -19,7 +19,7 @@ We base our gesture detection work on the [VGG16-SSD model](https://storage.goog
 5. numpy
 6. Pandas
 
-### run the following commands to test our model
+### Run the following commands to test our model
 
 1. Clone from github the Pytorch-SSD repository 
 ```
