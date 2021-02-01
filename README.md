@@ -15,22 +15,33 @@ We base our gesture detection work on the [VGG16-SSD model](https://storage.goog
 1. Python 3.6+
 2. OpenCV
 3. Pytorch 1.0 or Pytorch 0.4+
-4. numpy
-5. Pandas
+4. Pip3 or Pip
+5. numpy
+6. Pandas
 
 ### run the following commands to test our model
 
-1. Clone from github the repository 
+1. Clone from github the Pytorch-SSD repository 
 ```
-git clone https://github.com/linto-ai/gestures-detection-model
+git clone https://github.com/qfgaohao/pytorch-ssd
 
-cd gestures-detection-model
+cd pytorch-ssd
 ```
-2. Download dataset( images and videos )
+2. Download dataset( panoramic images and videos )
 ```
 git clone https://github.com/linto-ai/panoramic-dataset-for-gestures-detection
 ```
+3. Download model
+```
+git clone https://github.com/linto-ai/gestures-detection-model
+mv gestures-detection-model models
+```
 3. Install requirements
 ```
-pip3 install -r requirements.txt
+pip3 install -r models/requirements.txt
 ```
+4. Run image demo
+```
+python3 run_ssd_example.py vgg16-ssd models/vgg16-ssd-linagora-gest-detection.pth models/voc-model-labels.txt panoramic-dataset-for-gestures-detection/JPEGImages/<image_name>
+```
+![image_demo](https://github.com/linto-ai/gestures-detection-model/blob/main/demo/linagora_test-gest1.jpg)
