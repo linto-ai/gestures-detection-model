@@ -54,6 +54,7 @@ mv voc-model-labels.txt models
 ```
 python3 train_ssd.py --dataset_type voc --datasets data --net vgg16-ssd --pretrained_ssd models/vgg16-ssd-mp-0_7726.pth --scheduler cosine --lr 0.01 --t_max 100 --validation_epochs 1 --num_epochs 100 --base_net_lr 0.001  --batch_size 5
 ```
+![image for train](https://github.com/linto-ai/gestures-detection-model/blob/main/demo/train_vgg16.png)
 ### Run the following commands to ``` test ``` our model
 
 1. Clone from github the Pytorch-SSD repository 
