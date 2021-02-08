@@ -48,7 +48,7 @@ wget -P models https://storage.googleapis.com/models-hao/vgg16-ssd-mp-0_7726.pth
 ```
 git clone https://github.com/linto-ai/gestures-detection-model
 
-mv voc-model-labels.txt models
+cp gestures-detection-model/voc-model-labels.txt models
 ```
 6. Train VGG16-SSD model with transfer learning for 100 epochs
 ```
