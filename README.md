@@ -56,6 +56,7 @@ python3 train_ssd.py --dataset_type voc --datasets data --net vgg16-ssd --pretra
 ```
 Output:
 ![image for train](https://github.com/linto-ai/gestures-detection-model/blob/main/demo/train_vgg16.png)
+
 ### Run the following commands to ``` test ``` our model
 
 1. Clone from github the Pytorch-SSD repository 
