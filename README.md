@@ -48,43 +48,30 @@ wget -P models https://storage.googleapis.com/models-hao/vgg16-ssd-mp-0_7726.pth
 ```
 git clone https://github.com/linto-ai/gestures-detection-model
 
-cp gestures-detection-model/voc-model-labels.txt models
+cp gestures-detection-model/voc-model-labels.txt models/
 ```
 6. Train VGG16-SSD model with transfer learning for 100 epochs
 ```
 python3 train_ssd.py --dataset_type voc --datasets data --net vgg16-ssd --pretrained_ssd models/vgg16-ssd-mp-0_7726.pth --scheduler cosine --lr 0.01 --t_max 100 --validation_epochs 1 --num_epochs 100 --base_net_lr 0.001  --batch_size 5
 ```
 Output:
+
 ![image for train](https://github.com/linto-ai/gestures-detection-model/blob/main/demo/train_vgg16.png)
 
 ### Run the following commands to ``` test ``` our model
 
-1. Clone from github the Pytorch-SSD repository 
+1. Change the model path
 ```
-git clone https://github.com/qfgaohao/pytorch-ssd
+cp -r gestures-detection-model/vgg16-ssd-linagora-gest-detection.pth models/
+``` 
 
-cd pytorch-ssd
+2. Run image demo
 ```
-2. Download dataset( panoramic images and videos )
-```
-git clone https://github.com/linto-ai/panoramic-dataset-for-gestures-detection
-```
-3. Download model
-```
-git clone https://github.com/linto-ai/gestures-detection-model
-mv gestures-detection-model models
-```
-3. Install requirements
-```
-pip3 install -r models/requirements.txt
-```
-4. Run image demo
-```
-python3 run_ssd_example.py vgg16-ssd models/vgg16-ssd-linagora-gest-detection.pth models/voc-model-labels.txt panoramic-dataset-for-gestures-detection/JPEGImages/<image_name>
+python3 run_ssd_example.py vgg16-ssd models/vgg16-ssd-linagora-gest-detection.pth models/voc-model-labels.txt test/img1.jpg
 ```
 ![image_demo](https://github.com/linto-ai/gestures-detection-model/blob/main/demo/linagora_test-gest1.jpg)
-5. Run video demo 
+3. Run video demo 
 ```
-python3 run_ssd_live_demo.py vgg16-ssd models/vgg16-ssd-linagora-gest-detection.pth models/voc-model-labels.txt panoramic-dataset-for-gestures-detection/conf_video_gest/<video_name>
+python3 run_ssd_live_demo.py vgg16-ssd models/vgg16-ssd-linagora-gest-detection.pth models/voc-model-labels.txt test/vid1.avi
 ```
 ![video_demo](https://github.com/linto-ai/gestures-detection-model/blob/main/demo/gest.gif)
